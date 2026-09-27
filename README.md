@@ -22,14 +22,15 @@ The server runs at `http://localhost:5000` and restarts automatically when the s
 
 All routes accept and return JSON. Products use a numeric `id` and can include fields such as `name`, `category`, and `price`.
 
-| Method   | Path            | Description                          |
-| -------- | --------------- | ------------------------------------ |
-| `GET`    | `/`             | Check that the server is running     |
-| `POST`   | `/products`     | Add a product using the request body |
-| `GET`    | `/products`     | List all products                    |
-| `GET`    | `/products/:id` | Get a product by numeric ID          |
-| `PUT`    | `/products/:id` | Update fields on a product           |
-| `DELETE` | `/products/:id` | Delete a product                     |
+| Method   | Path                              | Description                          |
+| -------- | --------------------------------- | ------------------------------------ |
+| `GET`    | `/`                               | Check that the server is running     |
+| `POST`   | `/products`                       | Add a product using the request body |
+| `GET`    | `/products`                       | List all products                    |
+| `GET`    | `/products/:id`                   | Get a product by numeric ID          |
+| `GET`    | `/products?category=someCategory` | Get products by category             |
+| `PUT`    | `/products/:id`                   | Update fields on a product           |
+| `DELETE` | `/products/:id`                   | Delete a product                     |
 
 ### Examples
 
