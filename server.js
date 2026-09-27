@@ -20,8 +20,11 @@ app.get("/", (req, res) => {
 });
 //Create
 app.post("/products", (req, res) => {
-  const newProduct = req.body;
   const products = readProducts();
+  const newProduct = {
+    id: products.length === 0 ? 1 : products[products.length - 1].id + 1,
+    ...req.body,
+  };
   products.push(newProduct);
   writeProducts(products);
   res
