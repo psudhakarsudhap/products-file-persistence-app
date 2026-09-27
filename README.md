@@ -44,6 +44,7 @@ List products or retrieve one by ID:
 ```sh
 curl.exe http://localhost:5000/products
 curl.exe http://localhost:5000/products/1
+curl.exe http://localhost:5000/products?category=someCategory
 ```
 
 Update or delete product `1`:

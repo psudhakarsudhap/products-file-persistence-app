@@ -33,7 +33,11 @@ app.post("/products", (req, res) => {
 });
 //Read
 app.get("/products", (req, res) => {
-  const products = readProducts();
+  let products = readProducts();
+  const category = req.query.category;
+  if (category) {
+    products = products.filter((prod) => prod.category === category);
+  }
   res
     .status(200)
     .json({ message: "All Products feteched successfully", data: products });
